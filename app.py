@@ -134,4 +134,4 @@ def handle_data():
     return render_template('res.html', results = um)
 
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run(threaded=False)
