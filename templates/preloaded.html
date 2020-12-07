@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block Title %}
+  About Page
+
+{% endblock Title %}
+{% block activepre %}
+ 
+   
+ active
+{% endblock activepre %}
+{% block body %}
+  
+{%- for text, url in results.items() %}
+
+<div class="container" ,align="left">
+
+    <a href="/handle_data/{{text}}" ,target="blank"><button class='btn btn-primary'>{{url}}</button></a>
+    <br>
+</div>
+<br>
+<br>
+{%endfor %}
+<h3>{{results['summary']}}</h3>
+
+{% endblock body %}
